@@ -3,7 +3,7 @@ using HelpDesk.Application.Interfaces;
 using HelpDesk.Domain.Entities;
 using HelpDesk.Domain.Interfaces;
 
-namespace HelpDesk.Application.Services;
+namespace HelpDesk.Infrastructure.Services;
 
 public class AuthService : IAuthService
 {

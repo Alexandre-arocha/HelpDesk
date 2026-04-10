@@ -5,7 +5,7 @@ using HelpDesk.Domain.Entities;
 using HelpDesk.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace HelpDesk.Application.Services;
+namespace HelpDesk.Infrastructure.Services;
 
 public class UserService : IUserService
 {

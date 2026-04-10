@@ -5,7 +5,7 @@ using HelpDesk.Domain.Entities;
 using HelpDesk.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace HelpDesk.Application.Services;
+namespace HelpDesk.Infrastructure.Services;
 
 public class CommentService : ICommentService
 {
@@ -34,7 +34,6 @@ public class CommentService : ICommentService
 
         _context.Comments.Add(comment);
         ticket.AtualizadoEm = DateTime.UtcNow;
-
         await _context.SaveChangesAsync();
 
         var saved = await _context.Comments

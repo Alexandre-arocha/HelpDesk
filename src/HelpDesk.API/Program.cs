@@ -2,7 +2,6 @@ using System.Text;
 using HelpDesk.API.Middleware;
 using HelpDesk.Application.Interfaces;
 using HelpDesk.Application.Mappings;
-using HelpDesk.Application.Services;
 using HelpDesk.Domain.Interfaces;
 using HelpDesk.Infrastructure.Data;
 using HelpDesk.Infrastructure.Repositories;

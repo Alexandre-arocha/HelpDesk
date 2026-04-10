@@ -3,11 +3,10 @@ using HelpDesk.Application.DTOs;
 using HelpDesk.Application.Interfaces;
 using HelpDesk.Domain.Entities;
 using HelpDesk.Domain.Enums;
-using HelpDesk.Domain.Interfaces;
 using HelpDesk.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace HelpDesk.Application.Services;
+namespace HelpDesk.Infrastructure.Services;
 
 public class TicketService : ITicketService
 {
@@ -33,7 +32,6 @@ public class TicketService : ITicketService
         };
 
         _context.Tickets.Add(ticket);
-
         _context.AuditLogs.Add(new AuditLog
         {
             Id = Guid.NewGuid(),
@@ -44,7 +42,6 @@ public class TicketService : ITicketService
         });
 
         await _context.SaveChangesAsync();
-
         return await GetByIdAsync(ticket.Id);
     }
 
@@ -80,7 +77,6 @@ public class TicketService : ITicketService
             query = query.Where(t => t.TecnicoId == filter.TecnicoId.Value);
 
         var totalCount = await query.CountAsync();
-
         var items = await query
             .OrderByDescending(t => t.CriadoEm)
             .Skip((filter.Page - 1) * filter.PageSize)

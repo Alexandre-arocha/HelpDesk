@@ -4,7 +4,7 @@ using HelpDesk.Domain.Enums;
 using HelpDesk.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace HelpDesk.Application.Services;
+namespace HelpDesk.Infrastructure.Services;
 
 public class DashboardService : IDashboardService
 {
