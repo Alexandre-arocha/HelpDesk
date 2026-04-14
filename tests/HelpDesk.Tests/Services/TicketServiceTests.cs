@@ -2,7 +2,7 @@ using AutoMapper;
 using FluentAssertions;
 using HelpDesk.Application.DTOs;
 using HelpDesk.Application.Mappings;
-using HelpDesk.Application.Services;
+using HelpDesk.Infrastructure.Services;
 using HelpDesk.Domain.Entities;
 using HelpDesk.Domain.Enums;
 using HelpDesk.Infrastructure.Data;
